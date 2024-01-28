@@ -47,7 +47,7 @@ print("Plotting Innitial Solution: Cuboidic Wave Profile")
 print(lineSingle)
 
 fig = pyplot.figure(figsize=(11, 7), dpi=100)       #innitilize plot window
-ax  = fig.gca(projection = '3d')                    #defining axis is 3d
+ax  = fig.add_subplot(projection = '3d')            #defining axis is 3d
 X,Y = numpy.meshgrid(x, y)                          #Generating 2D Mesh
 
 #assign plot window the axes label ax, specifies its 3d projection plot
@@ -95,7 +95,7 @@ print("Plotting Numerical Solution")
 print(lineSingle)
 
 fig   = pyplot.figure(figsize=(11,7), dpi=100)
-ax    = fig.gca(projection = '3d')
+ax    = fig.add_subplot(projection = '3d')
 surf2 = ax.plot_surface(X, Y, u[:], cmap=cm.viridis)
 ax.set_title('Method - I:Using Nested FOR Loop')
 ax.set_xlabel('X Spacing')
@@ -133,7 +133,7 @@ print("Plotting Numerical Solution")
 print(lineSingle)
 
 fig = pyplot.figure(figsize=(11,7), dpi = 100)
-ax = fig.gca(projection = '3d')
+ax = fig.add_subplot(projection = '3d')
 surf3 = ax.plot_surface(X, Y, u[:], cmap = cm.viridis)
 ax.set_title('Method - II: Using ARRAYS Operation')
 ax.set_xlabel('X Spacing')

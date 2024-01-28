@@ -11,7 +11,7 @@ print("Solving Laplace Equation using Finite Difference Method\n")
 def plot2D(x, y, p):
     
     fig = pyplot.figure(figsize=(11,7),dpi=100)
-    ax = fig.gca(projection='3d')
+    ax = fig.add_subplot(projection = '3d')
     
     X,Y=numpy.meshgrid(x,y)      #Generating 2D Mesh
     

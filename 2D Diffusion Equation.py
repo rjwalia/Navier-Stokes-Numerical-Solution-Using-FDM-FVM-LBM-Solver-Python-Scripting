@@ -40,7 +40,7 @@ print(lineSingle)
 
 
 fig = pyplot.figure()
-ax  = fig.gca(projection='3d')
+ax  = fig.add_subplot(projection = '3d')
 X,Y = numpy.meshgrid(x, y)
 surf = ax.plot_surface(X,Y,u, rstride=1, cstride=1, cmap=cm.viridis, linewidth=0, antialiased=False)
 
@@ -79,7 +79,7 @@ print("Plotting Numerical Solution")
 print(lineSingle)
 
 fig = pyplot.figure()
-ax  = fig.gca(projection='3d')
+ax  = fig.add_subplot(projection = '3d')
 surf = ax.plot_surface(X,Y,u[:], rstride=1, cstride=1, cmap=cm.viridis,linewidth=0, antialiased=True)
 ax.set_zlim(1, 2.5)
 
