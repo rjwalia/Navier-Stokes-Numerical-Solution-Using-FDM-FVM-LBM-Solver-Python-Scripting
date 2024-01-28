@@ -45,7 +45,7 @@ b[int(3*ny/4),int(3*nx/4)] = -100
 
 def plot2D(x, y, p):
     fig = pyplot.figure(figsize=(11, 7), dpi=100)
-    ax = fig.gca(projection='3d')
+    ax = fig.add_subplot(projection = '3d')
 
     #Generating 2D Mesh    
     X, Y = numpy.meshgrid(x, y)
@@ -96,7 +96,7 @@ print(lineSingle)
 
 def plot2D(x, y, p):
     fig = pyplot.figure(figsize=(11, 7), dpi=100)
-    ax = fig.gca(projection='3d')
+    ax = fig.add_subplot(projection = '3d')
     
     X, Y = numpy.meshgrid(x, y)           #Generating 2D Mesh
     

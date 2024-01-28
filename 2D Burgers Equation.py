@@ -48,7 +48,7 @@ print("Plotting Innitial Solution: Cuboidic Wave Profile")
 print(lineSingle)
 
 fig = pyplot.figure(figsize=(11,7),dpi=100)          #Initializing the figure
-ax  = fig.gca(projection='3d')
+ax  = fig.add_subplot(projection = '3d')
 X,Y = numpy.meshgrid(x,y)
 
 ax.plot_surface(X,Y,u[:],cmap=cm.viridis,rstride=1,cstride=1)
@@ -98,7 +98,7 @@ print("Plotting Numerical Solution")
 print(lineSingle)
 
 fig = pyplot.figure(figsize=(11,7),dpi=100)
-ax  = fig.gca(projection='3d')
+ax  = fig.add_subplot(projection = '3d')
 
 X,Y = numpy.meshgrid(x,y)
 ax.plot_surface(X,Y,u[:],cmap=cm.viridis,rstride=1,cstride=1)
